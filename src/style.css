@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Inter, Arial;
+    /*100vh is one way to give backgroudn color to the entire background of a page*/
+    height: 100vh;
+    background-color: #282D35;
+}
+
+/*navbar elements*/
+nav{
+    display: flex;
+    align-items: center;
+    background-color: #21222A;
+    height: 90px;
+    padding: 30px 25px;
+}
+
+.nav-logo-text, .nav-title {
+    margin: 0;
+}
+
+.nav-logo-text{
+    margin-right: auto;
+    color: #61DAFB;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.nav-icon{
+    height: 30px;
+    margin-right: 7px;
+}
+
+.nav-title{
+    color: #DEEBF8;
+    font-weight: 600;
+}
+
+/* main elements*/
+
+main{
+    /*padding & margin top right bottom left */
+    padding: 57px 27px;
+    color: whitesmoke;
+
+    /*sets a background image and placement*/
+    /*no repeat will stop it from repeating across the page*/
+    background-image: url(./images/background-logo.png);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+}
+
+.main-title{
+    margin: 0;
+    font-size: 39px;
+    /*letter-spacing controls the spacing between the letters*/
+    letter-spacing: -0.05em;
+}
+
+.main-facts{
+    margin-top: 46px;
+    max-width: 400px;
+}
+
+.main-facts > li{
+    line-height: 19px;
+    padding-block: 10px;
+}
+/*controls the size and color of the bullets*/
+.main-facts >li::marker{
+    font-size: 1.3rem;
+    color: #61DAFB;
+}
+
+
+
+
+

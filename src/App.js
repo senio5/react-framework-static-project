@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+//need to import the components and React from "react"
+import React from "react";
+import Main from "./components/Main";
+import Navbar from "./components/Navbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+//create export so it can be imported into index.js
+export default function App(){
+    return(
+        //need a div container to contain both components can only return one element in React
+        <div className="container">
+            <Navbar />
+            <Main />
+        </div>
+    )
 }
-
-export default App;
