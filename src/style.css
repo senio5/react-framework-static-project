@@ -1,83 +1,150 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-    font-family: Inter, Arial;
-    /*100vh is one way to give backgroudn color to the entire background of a page*/
-    height: 100vh;
-    background-color: #282D35;
 }
 
-/*navbar elements*/
-nav{
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* NAV styles */
+
+nav {
     display: flex;
     align-items: center;
-    background-color: #21222A;
-    height: 90px;
+    background-color: #ffffff;
     padding: 30px 25px;
+    height: 60px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
 }
 
-.nav-logo-text, .nav-title {
-    margin: 0;
+nav.dark {
+    background-color: #21222A;
 }
 
-.nav-logo-text{
-    margin-right: auto;
+.nav-icon {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-logo-text {
     color: #61DAFB;
-    font-weight: 700;
-    font-size: 22px;
+    margin-right: auto;
 }
 
-.nav-icon{
-    height: 30px;
-    margin-right: 7px;
-}
-
-.nav-title{
+.nav-title {
     color: #DEEBF8;
+}
+
+.toggler {
+    display: flex;
+    align-items: center;
+}
+
+.toggler p {
+    font-size: 0.625rem;
     font-weight: 600;
 }
-
-/* main elements*/
-
-main{
-    /*padding & margin top right bottom left */
-    padding: 57px 27px;
-    color: whitesmoke;
-
-    /*sets a background image and placement*/
-    /*no repeat will stop it from repeating across the page*/
-    background-image: url(./images/background-logo.png);
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 50%;
+/*"toggle slider" design when in light mode*/
+.toggler-slider {
+    width: 30px;
+    height: 13px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    /*margin-inline is the margin left and right of the slider*/
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid black;
+    box-sizing: content-box;
+}
+/*"toggle slider design when in dark mode*/
+nav.dark .toggler-slider {
+    border-color: white;
+    background-color: #20c536;
+}
+/*toggle circle when in light mode*/
+.toggler-slider-circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+}
+/*toggle circle features with background color modified when in dark mode*/
+nav.dark .toggler-slider-circle {
+    background-color: #61DAFB;
+}
+/*when toggler is in light its left lettering color*/
+.toggler-light {
+    color: #2B283A;
+}
+/*when toggler is in light its right lettering color*/
+nav.dark .toggler-light {
+    color: #918E9B;
+}
+/*when toggler is in dark its left lettering color*/
+.toggler-dark {
+    color: #D5D4D8;
+}
+/*when toggler is in dark its right lettering color*/
+nav.dark .toggler-dark {
+    color: #FFFFFF;
+}
+/*justify-content: flex-start in the original and the flex-end
+here in the dark gives the slider its sliding capabilities
+*/
+nav.dark .toggler-slider {
+    justify-content: flex-end;
 }
 
-.main-title{
+/* MAIN styles */
+main {
+    padding: 57px 27px; 
+    background-repeat: no-repeat;
+    background-image: url("./images/background-icon.png"); 
+    background-position: right center;
+    flex: 1 1 auto;
+    background-color: white;
+    color: #2B283A;
+}
+/*when switched between light and darkmode it changes the color
+of the letter and the background color*/
+main.dark {
+    background-image: url("./images/background-logo.png"); 
+    background-color: #282D35;
+    color: white;    
+}
+
+.main-title {
     margin: 0;
     font-size: 39px;
-    /*letter-spacing controls the spacing between the letters*/
     letter-spacing: -0.05em;
 }
 
-.main-facts{
+.main-facts {
     margin-top: 46px;
     max-width: 400px;
 }
 
-.main-facts > li{
+.main-facts > li {
     line-height: 19px;
     padding-block: 10px;
 }
-/*controls the size and color of the bullets*/
-.main-facts >li::marker{
-    font-size: 1.3rem;
+
+.main-facts > li::marker {
+    font-size: 1.4rem;
     color: #61DAFB;
 }
-
-
-
-
 
